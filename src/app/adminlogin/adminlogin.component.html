@@ -1,0 +1,36 @@
+
+  <form class="form">
+      <div class="container">
+       
+        
+        <hr>
+        <h2>ADMIN LOGIN</h2>
+
+        
+          <div class="imgcontainer">
+            <img src="./assets/p4.svg" alt="Avatar" class="avatar">
+          </div>
+    
+    
+        <label for="username"><b>Username</b></label>
+        <div class="input-group">
+        <span class="input-group-addon">
+          <i class="glyphicon glyphicon-envelope"></i> 
+           </span><input type="text"  [(ngModel)]="username" class="form-control" placeholder="Enter Username" name="username" id="username" required></div>
+    
+        <label for="psw"><b>Password</b></label>
+        <div class="input-group">
+        <span class="input-group-addon">
+          <i class="glyphicon glyphicon-user"></i> 
+           </span><input type="password"  [(ngModel)]="password" class="form-control" placeholder="Enter Password" name="password" id="password" required></div>
+    
+        <div>
+          <button class="btn btn-primary" style="padding-bottom: 14px; margin-bottom: 8px;" (click)="authenticate()">Login</button>
+          <a href="/adminlogin"><button type="button" class="btn btn-light" style="padding-bottom: 14px; margin-bottom: 8px;">Cancel</button></a>
+      
+        </div>
+        <hr>
+      
+      </div>
+    </form>
+

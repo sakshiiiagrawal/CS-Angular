@@ -1,0 +1,473 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        
+        <!-- <span style="font-size:30px;cursor:pointer;color: #f2f2f2;;" onclick="openNav()">&#9776; Mentor On Demand|</span> -->
+        <a class="navbar-brand" href="#">Mentor On Demand</a>
+      </div>
+      <div class="collapse navbar-collapse rmvbgcolor" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a routerLink="/userwelcome">Home</a></li>
+          <li><a class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal9">Trainings</a></li>
+          <li><a class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal10">Completed Trainings</a></li>
+          <li><a class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal11">Payments</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a  (click)="logout()" style="cursor: pointer"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="mySidenav" class="sidenav">
+    <a class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal5" id="about">Profile</a>
+    <a class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal7" id="blog">Blog</a>
+    <a class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal8" id="projects">Projects</a>
+      <a class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal6"  id="contact">Contact</a>
+    </div>
+  <!-- 5th modal -->
+  <div class="modal fade" id="myModal5" role="dialog">
+    <div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
+    <h4 class="modal-title">User Profile Card</h4>
+    </div>
+    <div class="modal-body">
+      <div class="card">
+        <img src="./assets/p13.png" alt="Sakshi" style="width:100%">
+        <h1>{{user.firstname}} {{user.lastname}}</h1>
+        <p>Email: {{user.emailid}}</p>
+        <p>Contact: {{user.contactnumber}}</p>
+        <p>Linkedin URL: {{user.linkedinurl}}</p>
+        <p>Rating: {{user.rating}}</p>
+        <div style="margin: 24px 0;">
+          <a href="#"><i class="fab fa-dribbble"></i></a> 
+          <a href="#"><i class="fab fa-twitter"></i></a>  
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>  
+          <a href="#"><i class="fab fa-facebook-f"></i></a> 
+        </div>
+        <p><button>Contact</button></p>
+      </div>
+    </div>
+    <div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div>
+    </div>
+    </div>
+    </div>
+<!-- 5th modal end -->
+
+<!-- 6th modal -->
+<div class="modal fade" id="myModal6" role="dialog">
+    <div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
+    <h4 class="modal-title">Contact Us</h4>
+    </div>
+    <div class="modal-body">
+      <div class="container modal-content-6">
+        <div>
+          
+          <p>Swing by for a cup of coffee, or leave us a message:</p>
+        </div>
+        <div class="row">
+          <div class="column">
+            <img src="./assets/p13.png" >
+          </div>
+          <div class="column">
+            <form action="/action_page.php">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              <br><label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              <br><label for="country">Country</label>
+              <select id="country" name="country">
+                  <option value="canada">India</option>
+                <option value="australia">Australia</option>
+                
+                <option value="usa">USA</option>
+              </select>
+              <br><label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+              <br><input type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div>
+    </div>
+    </div>
+    </div>
+  <!-- 6th modal end -->
+
+  <!-- 7th modal -->
+<div class="modal fade" id="myModal7" role="dialog">
+  <div class="modal-dialog">
+  <div class="modal-content" style="width: 160%">
+  <div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal">&times;</button>
+  <h4 class="modal-title">Blog</h4>
+  </div>
+  <div class="modal-body modal-content-7">
+    
+      <div class="header">
+          <h2>TECH MATTERS</h2>
+        </div>
+        
+        <div class="row">
+          <div class="leftcolumn">
+            <div class="card">
+              <h2>Dostavista, the ‘crowdsourced’ same-day delivery service, raises $15M Series B</h2>
+              
+              <div><img src="./assets/p22.png" alt="Sakshi" style="height:200px;"></div>
+              <p>Dostavista, the “crowdsourced” same-day delivery service founded in Russia but operating in several countries, has raised a $15 million Series B. Leading the round is Vostok New Ventures, with participation from existing investors Flashpoint, and Addventure.</p>
+              <p>Founded in 2012 by Mike Alexandrovski, after he initially considered creating a game where players would be asked to deliver virtual items before pivoting to the real thing, Dostavista promises same-day delivery powered by its network of “trusted couriers”.</p>
+            </div>
+            <div class="card">
+              <h2>Singularity 6 raises $16.5M from Andreessen Horowitz to create a ‘virtual society’</h2>
+              
+              <div><img src="./assets/p21.jpg" alt="Sakshi" style="height:200px;"></div>
+              <p>When Fortnite reached stratospheric popularity early last year, there were undoubtedly an awful lot of VCs on the sidelines looking enviously at the massive platform and wondering what opportunities could be gleaned from its rapid rise.</p>
+            <p>Epic Games went on to raise later that year at a nearly $15 billion valuation so some of those investors decided to invest directly in the Fortnite creator’s continued ascent, but others have been looking to get in on the ground floor of new operations that are aiming to rethink the line between video games and social networks.</p>
+            </div>
+          </div>
+          <div class="rightcolumn">
+            <div class="card">
+              <h2>About Me</h2>
+              <div><img src="./assets/p13.png" alt="Sakshi"></div>
+              <p>==========================</p>
+            </div>
+            <div class="card">
+              <h3>Popular Post</h3>
+              <div><img src="./assets/p25.png" alt="Sakshi"></div><br>
+              <div><img src="./assets/p24.jpg" alt="Sakshi"></div><br>
+              <div><img src="./assets/p23.jpg" alt="Sakshi"></div><br>
+            </div>
+            <div class="card">
+              <h3>Follow Me</h3>
+              <div style="margin: 24px 0;">
+                <a href="#"><i class="fab fa-dribbble"></i></a> 
+                <a href="#"><i class="fab fa-twitter"></i></a>  
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>  
+                <a href="#"><i class="fab fa-facebook-f"></i></a> 
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
+        <div class="footer">
+          <h2>Thank You!</h2>
+        </div>
+  </div>
+  <div class="modal-footer">
+  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+  </div>
+  </div>
+  </div>
+  </div>
+<!-- 7th modal end -->
+
+  <!-- 8th modal -->
+  <div class="modal fade" id="myModal8" role="dialog">
+    <div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
+    <h4 class="modal-title">Projects</h4>
+    </div>
+    <div class="modal-body">
+      
+      <p>No Projects!</p>
+
+
+    </div>
+    <div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div>
+    </div>
+    </div>
+    </div>
+<!-- 8th modal end -->
+
+<!-- 9th modal -->
+<div class="modal fade" id="myModal9" role="dialog">
+  <div class="modal-dialog">
+  <div class="modal-content">
+  <div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal">&times;</button>
+  <h4 class="modal-title">Technology</h4>
+  </div>
+  <div class="modal-body  modal-content-9">
+    <table class="table table-hover table-bordered">
+      <thead>
+        <tr>
+         <th>Id</th>
+         <th>Course Name</th>
+         <th>Course Duration</th>
+         <th>Course Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let user of techs">
+         <td>{{user.id}}</td>
+         <td>{{user.techname}}</td>
+         <td>{{user.duration}}</td>
+         <td>{{user.price}}</td>
+        </tr>
+        </tbody>
+  </table> 
+<br><br>
+
+<footer class="container-fluid" >
+      <div class="container">                 
+              <ul class="pagination">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+              </ul>
+            </div>
+</footer>
+    
+  </div>
+  <div class="modal-footer">
+  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+  </div>
+  </div>
+  </div>
+  </div>
+<!-- 9th modal end -->
+
+<!-- 10th modal -->
+<div class="modal fade" id="myModal10" role="dialog">
+  <div class="modal-dialog" style="width: 50%">
+  <div class="modal-content">
+  <div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal">&times;</button>
+  <h4 class="modal-title">Completed Trainings</h4>
+  </div>
+  <div class="modal-body  modal-content-10">
+    
+    <table  style="margin-top: 80px;">
+      <tr>
+        <th>S.No.</th>
+        <th>COURSE NAME</th>
+        <th>COURSE CODE</th>
+        <th>TIME DURATION</th>
+        <th>COMPLETION STATUS</th>
+        <th>VALADITY</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Java</td>
+        <td>NVA002</td>
+        <td>50 hrs</td>
+        <td>Completed</td>
+        <td>June 2020</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>HTML</td>
+          <td>EDD976</td>
+          <td>20 hrs</td>
+          <td>Completed</td>
+          <td>June 2020</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>CSS</td>
+          <td>EDE010</td>
+          <td>15 hrs</td>
+          <td>Completed</td>
+          <td>June 2020</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>JAVASCRIPT</td>
+          <td>WQN458</td>
+          <td>32 hrs</td>
+          <td>Completed</td>
+          <td>June 2020</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td>BOOTSTRAP</td>
+          <td>GDV763</td>
+          <td>30 hrs</td>
+          <td>Completed</td>
+          <td>June 2020</td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td>SQL</td>
+          <td>HFN005</td>
+          <td>50 hrs</td>
+          <td>Completed</td>
+          <td>June 2020</td>
+      </tr>
+    </table>
+    
+  </div>
+  <div class="modal-footer">
+  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+  </div>
+  </div>
+  </div>
+  </div>
+  <br><br>
+
+<footer class="container-fluid">
+          
+</footer>
+<!-- 10th modal end -->
+
+<!-- 11th modal -->
+<div class="modal fade" id="myModal11" role="dialog">
+  <div class="modal-dialog">
+  <div class="modal-content">
+  <div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal">&times;</button>
+  <h4 class="modal-title">Payments</h4>
+  </div>
+  <div class="modal-body  modal-content-11">
+    <div class="row" style="margin: 0 50px 0 50px;">
+      <div class="text-center">
+          <h1>Receipt</h1>
+      </div>
+      
+      <table class="table table-hover">
+          <thead>
+              <tr>
+                  <th>TRAINING COURSE</th>
+                  <th>#</th>
+                  <th class="text-center">Price</th>
+                  <th class="text-center">Total</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td class="col-md-9"><em>Java</em></td>
+                  <td class="col-md-1" style="text-align: center"> 2 </td>
+                  <td class="col-md-1 text-center">$13</td>
+                  <td class="col-md-1 text-center">$26</td>
+              </tr>
+              <tr>
+                  <td class="col-md-9"><em>HTML</em></td>
+                  <td class="col-md-1" style="text-align: center"> 1 </td>
+                  <td class="col-md-1 text-center">$8</td>
+                  <td class="col-md-1 text-center">$8</td>
+              </tr>
+              <tr>
+                  <td class="col-md-9"><em>CSS</em></td>
+                  <td class="col-md-1" style="text-align: center"> 3 </td>
+                  <td class="col-md-1 text-center">$16</td>
+                  <td class="col-md-1 text-center">$48</td>
+              </tr>
+              <tr>
+                  <td>   </td>
+                  <td>   </td>
+                  <td class="text-right">
+                  <p>
+                      <strong>Subtotal: </strong>
+                  </p>
+                  <p>
+                      <strong>Tax: </strong>
+                  </p></td>
+                  <td class="text-center">
+                  <p>
+                      <strong>$6.94</strong>
+                  </p>
+                  <p>
+                      <strong>$6.94</strong>
+                  </p></td>
+              </tr>
+              <tr>
+                  <td>   </td>
+                  <td>   </td>
+                  <td class="text-right"><h4><strong>Total: </strong></h4></td>
+                  <td class="text-center text-danger"><h4><strong>$31.53</strong></h4></td>
+              </tr>
+          </tbody>
+      </table>
+      <button type="button" class="btn  btn-lg btn-block">
+          Pay Now   <span class="glyphicon glyphicon-chevron-right"></span>
+      </button>
+  </div>
+    
+  </div>
+  <div class="modal-footer">
+  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+  </div>
+  </div>
+  </div>
+  </div>
+<!-- 11th modal end -->
+
+
+  <div class="jumbotron">
+    <div class="container text-center">
+      <h1>Welcome User!</h1>      
+      
+        
+      
+    </div>
+  </div>
+    
+  <div class="container-fluid bg-3 text-center">    
+    <br>
+    <div class="row">
+      <div class="col-sm-3">
+        
+        <img src="./assets/p5.jpg" class="img-responsive" style="width:100%" alt="Image">
+      </div>
+      <div class="col-sm-3"> 
+        
+        <img src="./assets/p6.jpg" class="img-responsive" style="width:100%" alt="Image">
+      </div>
+      <div class="col-sm-3"> 
+        
+        <img src="./assets/p7.jpg" class="img-responsive" style="width:100%" alt="Image">
+      </div>
+      <div class="col-sm-3">
+        
+        <img src="./assets/p8.jpg" class="img-responsive" style="width:100%" alt="Image">
+      </div>
+    </div>
+  </div><br>
+  
+  <div class="container-fluid bg-3 text-center">    
+    <div class="row">
+      <div class="col-sm-3">
+        
+        <img src="./assets/p9.jpg" class="img-responsive" style="width:100%" alt="Image">
+      </div>
+      <div class="col-sm-3"> 
+        
+        <img src="./assets/p10.png" class="img-responsive" style="width:100%" alt="Image">
+      </div>
+      <div class="col-sm-3"> 
+        
+        <img src="./assets/p11.jpg" class="img-responsive" style="width:100%" alt="Image">
+      </div>
+      <div class="col-sm-3">
+        
+        <img src="./assets/p12.png" class="img-responsive" style="width:100%" alt="Image">
+      </div>
+    </div>
+  </div><br><br>
+  
+  <footer class="container-fluid text-center">
+    
+  </footer>

@@ -1,0 +1,249 @@
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  
+  /* Add a gray background color and some padding to the footer */
+  footer {
+    background-color: #000000;
+    padding: 25px;
+  }
+  .row img {
+      height: 200px;
+  }
+  #mySidenav a {
+    position: absolute;
+    left: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+  }
+  
+  #mySidenav a:hover {
+    left: 0;
+  }
+  
+  #about {
+    top: 60px;
+    background-color: #000000;
+  }
+  
+  #blog {
+    top: 120px;
+    background-color: #000000;
+  }
+  
+  #projects {
+    top: 180px;
+    background-color: #000000;
+  }
+  
+  #contact {
+    top: 240px;
+    background-color: #000000
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+
+
+/* model-6 style */
+  .modal-content-6 * {
+    box-sizing: border-box;
+  }
+  
+  .modal-content-6 input[type=text], select, textarea {
+    /* width: 100%; */
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  .modal-content-6 input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .modal-content-6 input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style the container/contact section */
+  .modal-content-6 .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  /* Create two columns that float next to eachother */
+  .modal-content-6 .column {
+    /* float: left; */
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .modal-content-6 .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .modal-content-6 @media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+      /* width: 100%; */
+      margin-top: 0;
+    }
+  }
+
+
+  /* model-7 style */
+
+  .modal-content-7 * {
+    box-sizing: border-box;
+  }
+  
+  /* Add a gray background color with some padding */
+  .modal-content-7 body {
+    font-family: Arial;
+    padding: 20px;
+    background: #f1f1f1;
+  }
+  
+  /* Header/Blog Title */
+  .modal-content-7 .header {
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+    background: white;
+  }
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .modal-content-7 .leftcolumn {   
+    float: left;
+    width: 50%;
+    }
+  
+  /* Right column */
+  .modal-content-7 .rightcolumn {
+    float: left;
+    width: 50%;
+        padding-left: 20px;
+  }
+  
+  /* Fake image */
+  .modal-content-7 .fakeimg {
+    background-color: #aaa;
+    /* width: 100%; */
+    padding: 20px;
+  }
+  
+  /* Add a card effect for articles */
+  .modal-content-7 .card {
+     background-color: white;
+     padding: 20px;
+     margin-top: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .modal-content-7 .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  .modal-content-7 .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  .modal-content-7 @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  .modal-content-9 table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #000000;
+  }
+  
+  .modal-content-9 th, td {
+    text-align: left;
+    padding: 16px;
+  }
+  
+  .modal-content-9 tr:nth-child(even) {
+    background-color: #f2f2f2;
+   
+  }
+
+  .modal-content-10 table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #000000;
+  }
+  
+  .modal-content-10 th, td {
+    text-align: left;
+    padding: 16px;
+  }
+  
+  .modal-content-10 tr:nth-child(even) {
+    background-color: #f2f2f2
+  }
+
+  .modal-content-10 footer {
+    background-color: #000000;
+    padding: 25px;
+  }
+
+
+  .modal-content-11 table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    /* width: 100%; */
+    border: 1px solid #000000;
+  }
+  
+  .modal-content-11 th, td {
+    text-align: left;
+    padding: 16px;
+  }
+  
+  .modal-content-11 tr:nth-child(even) {
+    background-color: #f2f2f2
+  }
+  
+  .modal-content-11 .btn {
+      background-color: #000000;
+      color: #f2f2f2;
+  }
+
+  .rmvbgcolor .li {
+    background-color: #000000;
+    border-color: #000000;
+  }

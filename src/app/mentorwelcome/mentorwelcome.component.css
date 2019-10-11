@@ -1,0 +1,129 @@
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  
+  /* Add a gray background color and some padding to the footer */
+  footer {
+    background-color: #000000;
+    padding: 25px;
+  }
+  .row img {
+      height: 200px;
+  }
+#mySidenav a {
+position: absolute;
+left: -80px;
+transition: 0.3s;
+padding: 15px 0 15px 15px;
+width: 130px;
+text-decoration: none;
+font-size: 20px;
+color: white;
+border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+left: 0;
+
+}
+
+#about {
+top: 60px;
+background-color: #000000;
+}
+
+#blog {
+top: 150px;
+background-color: #000000;
+}
+
+#projects {
+top: 236px;
+background-color: #000000;
+}
+
+#contact {
+top: 325px;
+background-color: #000000
+}
+html, body {
+margin: 0; padding: 0;
+}
+.sidenav i {
+  padding-left: 24px;
+}
+
+/* https://subtlepatterns.com/patterns/geometry2.png */
+.hero-bkg-animated {
+background-image: url(C:/Users/cogvilt43/MentorOnDemand/src/assets/p18.jpg);
+background-repeat: no-repeat;
+width: 100%;
+margin: 0;
+text-align: center;
+height: 700px;
+padding-top: 120px;
+background-position: center center;
+background-size: cover;
+/* box-sizing: border-box; */
+/* -webkit-animation: slide 10s linear infinite; */
+}
+
+.hero-bkg-animated h1 {
+font-family: sans-serif;
+}
+
+@-webkit-keyframes slide {
+  from { background-position: 0 0; }
+  to { background-position: -400px 0; }
+}
+
+.modal-content-12 table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  /* width: 100%; */
+  border: 1px solid #000000;
+}
+
+.modal-content-12 th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+.modal-content-12 tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+
+.modal-content-12 .btn {
+    background-color: #000000;
+    color: #f2f2f2;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.modal-content-14 table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #000000;
+}
+
+.modal-content-14 th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+.modal-content-14 tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+
+.modal-content-14 footer {
+  background-color: #000000;
+  padding: 25px;
+}

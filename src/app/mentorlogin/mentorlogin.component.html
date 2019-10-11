@@ -1,0 +1,109 @@
+<h2>Mentor Login</h2>
+<div class="full">
+<!-- <a routerLink="/mentorwelcome" method="POST"> -->
+  <div class="imgcontainer">
+    <img src="./assets/p19.png" alt="Avatar" class="avatar">
+  </div>
+<!-- ////////////////////////////////////////LOGIN MENTOR/////////////////////////////////// -->
+  <div class="container">
+      <form [formGroup]="LoginForm" (ngSubmit)="authenticateMentor()">
+    
+    <input type="text" placeholder="Enter Username" formControlName="username" required>
+    <input type="password" placeholder="Enter Password"formControlName="password" required>
+        
+    <a><button type="submit">Login</button></a>
+    <!-- <label> -->
+      <!-- <input type="checkbox" checked="checked" name="remember"> Remember me -->
+    <!-- </label> -->
+    </form>
+  </div>
+<!-- </a> -->
+  
+  <div class="container" style="background-color:#f1f1f1">
+    <a  class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal3">Sign Up</a>
+    <span class="psw"><a href="#">Forgot password?</a></span>
+  </div>
+
+<!-- ////////////////////////////////////////SIGNUP MENTOR/////////////////////////////////// -->
+<div class="modal fade" id="myModal3" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Sign Up</h4>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="RegisterForm" (ngSubmit)="registerMentor()" style="border:1px solid #ccc">
+            <div class="container" style="width: 100%">
+              <h1>Sign Up</h1>
+              <p>Please fill in this form to create an account.</p>
+              <hr>
+              <div class="form-group">
+                <!-- <label for="username"><b>Username</b></label> -->
+                <input type="text" placeholder="Enter Username" formControlName="username" required>
+              </div>
+          
+              <div class="form-group">
+                <!-- <label form="password"><b>Password</b></label> -->
+                <input type="password" placeholder="Enter Password" formControlName="password" required>
+              </div>
+
+              <div class="form-group">
+                <!-- <label for="repPassword"><b>Repeat Password</b></label> -->
+                <input type="password" placeholder="Repeat Password" formControlName="reppassword" required>
+              </div>
+
+              <div class="form-group">
+                <!-- <label for="firstName"><b>FirstName</b></label> -->
+                <input type="text" placeholder="Enter FirstName" formControlName="firstname" required>
+              </div>
+
+              <div class="form-group">
+                <!-- <label for="lastName"><b>LastName</b></label> -->
+                <input type="text" placeholder="Enter LastName" formControlName="lastname" required>
+              </div>
+
+              <div class="form-group">
+                <!-- <label for="emailId"><b>Email Id</b></label> -->
+                <input type="text" placeholder="Enter Email Id" formControlName="emailid" required>
+              </div>
+
+              <div class="form-group">
+                <!-- <label for="contactNumber"><b>Contact Number</b></label> -->
+                <input type="text" placeholder="Enter Contact Number" formControlName="contactnumber" required>
+              </div>
+
+              <div class="form-group">
+                <!-- <label for="linkedinUrl"><b>linkedinUrl</b></label> -->
+                <input type="text" placeholder="Enter Linkedin Url" formControlName="linkedinurl" required>
+              </div>
+
+              <div class="form-group">
+                <!-- <label for="yearsOf_experience"><b>yearsOf_experience</b></label> -->
+                <input type="text" placeholder="Enter Years Of Experience" formControlName="yearsofexperience" required>
+              </div>
+
+              
+              <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+              </label>
+              
+              <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+          
+              <div class="clearfix">
+                <button type="button" class="cancelbtn">Cancel</button>
+                <a><button type="submit" class="signupbtn">Sign Up</button></a>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div> -->
+      </div>
+      
+    </div>
+  </div>
+</div>

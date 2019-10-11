@@ -1,0 +1,287 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#">Mentor On Demand</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a routerLink="/mentorwelcome">Home</a></li>
+          <li><a class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal15">Notification</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a   (click)="logout()" style="cursor: pointer"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="jumbotron">
+        <div class="container text-center">
+          <h1>Welcome Mentor!</h1>      
+          
+        </div>
+      </div>
+<div id="mySidenav" class="sidenav">
+<a class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal13"  id="about">Profile</a>
+<a class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal14"  id="blog">History</a>
+<a class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal12" id="projects">Calendar</a>
+<a class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="contact">Edit Skills</a>
+</div>
+
+<div class="hero-bkg-animated">
+
+</div>
+<!-- 1st Modal-->
+<div class="modal fade" id="myModal" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+<h4 class="modal-title">Edit Skills</h4>
+</div>
+<div class="modal-body">
+  <table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Skill Name</th>
+        <th>TOC</th>
+        <th>Prerequisites</th>
+        <th> </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let user of skills">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.toc}}</td>
+        <td>{{user.prerequisites}}</td>
+        <td><button class="btn btn-danger btn-lg" (click)="deleteUser(user)"> Delete Skill</button></td>
+      </tr>
+      </tbody>
+</table>
+
+
+<hr>
+        <form class="form">
+          <div class="container" style="width: 100%">
+            <h1 style=" margin-left: 100px;"><strong>Add Skills</strong></h1>
+            
+            <hr>
+            
+            
+            <label for="name"><b>Skill Name</b></label>
+            <div class="input-group">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-user"></i> 
+               </span><input type="text" [(ngModel)]="skill.name" class="form-control" placeholder="Enter Skill Nmae" name="name" id="name" required></div>
+        
+        
+        
+            <label for="toc"><b>TOC</b></label>
+            <div class="input-group">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-user"></i> 
+               </span><input type="text" [(ngModel)]="skill.toc" class="form-control" placeholder="Enter TOC" name="toc" id="toc" required></div>
+        
+            <label for="prerequisites"><b>Prerequisites</b></label>
+            <div class="input-group">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-user"></i> 
+               </span><input type="text" [(ngModel)]="skill.prerequisites" class="form-control" placeholder="Enter Prerequisites" name="prerequisites" id="prerequisites" required></div>
+        
+        
+               <div class="add" style="width: 10%; text-align: center;">
+                <button type="button" class="btn btn-info btn-lg"  (click)="createUser()">Add</button>
+              </div>
+      
+          </div>
+        </form>
+
+
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+</div>
+</div></div>
+</div>
+
+<!--1st model end -->
+
+<!-- 12th modal -->
+<div class="modal fade" id="myModal12" role="dialog">
+  <div class="modal-dialog">
+  <div class="modal-content">
+  <div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal">&times;</button>
+  <h4 class="modal-title">Calendar</h4>
+  </div>
+  <div class="modal-body  modal-content-12">
+    
+    <table class="table table-hover table-bordered">
+      <thead>
+        <tr>
+         <th>Id</th>
+         <th>Mentor Id</th>
+         <th>Time Slot</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let user of calendars">
+         <td>{{user.id}}</td>
+         <td>{{user.mentorId}}</td>
+         <td>{{user.timeSlot}}</td>
+        </tr>
+        </tbody>
+  </table> 
+      <!-- ================================== -->
+  </div>
+  <div class="modal-footer">
+  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+  </div>
+  </div>
+  </div>
+  </div>
+<!-- 12th modal end -->
+
+<!-- 13th modal -->
+<div class="modal fade" id="myModal13" role="dialog">
+  <div class="modal-dialog">
+  <div class="modal-content">
+  <div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal">&times;</button>
+  <h4 class="modal-title">Mentor Profile Card</h4>
+  </div>
+  <div class="modal-body">
+    
+    <div class="card">
+        <img src="./assets/p13.png" alt="Sakshi" style="width:100%">
+        <h1>{{user.firstname}} {{user.lastname}}</h1>
+        <p>Email: {{user.emailid}}</p>
+        <p>Contact: {{user.contactnumber}}</p>
+        <p>Linkedin URL: {{user.linkedinurl}}</p>
+        <p>Rating: {{user.rating}}</p>
+        <div style="margin: 24px 0;">
+          <a href="#"><i class="fab fa-dribbble"></i></a> 
+          <a href="#"><i class="fab fa-twitter"></i></a>  
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>  
+          <a href="#"><i class="fab fa-facebook-f"></i></a> 
+        </div>
+        <p><button>Contact</button></p>
+      </div>
+  </div>
+  <div class="modal-footer">
+  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+  </div>
+  </div>
+  </div>
+  </div>
+<!-- 13th modal end -->
+
+<!-- 14th modal -->
+<div class="modal fade" id="myModal14" role="dialog">
+  <div class="modal-dialog" style="width: 50%">
+  <div class="modal-content">
+  <div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal">&times;</button>
+  <h4 class="modal-title">History</h4>
+  </div>
+  <div class="modal-body  modal-content-14">
+    <table  style="margin-top: 80px;">
+      <tr>
+        <th>S.No.</th>
+        <th>COURSE NAME</th>
+        <th>COURSE CODE</th>
+        <th>TIME DURATION</th>
+        <th>COMPLETION STATUS</th>
+        <th>VALADITY</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Java</td>
+        <td>NVA002</td>
+        <td>50 hrs</td>
+        <td>Completed</td>
+        <td>June 2020</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>HTML</td>
+          <td>EDD976</td>
+          <td>20 hrs</td>
+          <td>Completed</td>
+          <td>June 2020</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>CSS</td>
+          <td>EDE010</td>
+          <td>15 hrs</td>
+          <td>Completed</td>
+          <td>June 2020</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>JAVASCRIPT</td>
+          <td>WQN458</td>
+          <td>32 hrs</td>
+          <td>Completed</td>
+          <td>June 2020</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td>BOOTSTRAP</td>
+          <td>GDV763</td>
+          <td>30 hrs</td>
+          <td>Completed</td>
+          <td>June 2020</td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td>SQL</td>
+          <td>HFN005</td>
+          <td>50 hrs</td>
+          <td>Completed</td>
+          <td>June 2020</td>
+      </tr>
+    </table>
+    
+  </div>
+  <div class="modal-footer">
+  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+  </div>
+  </div>
+  </div>
+  </div>
+  <br><br>
+
+<footer class="container-fluid">
+          
+</footer>
+<!-- 14th modal end -->
+
+<!-- 15th modal -->
+<div class="modal fade" id="myModal15" role="dialog">
+  <div class="modal-dialog">
+  <div class="modal-content">
+  <div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal">&times;</button>
+  <h4 class="modal-title">Notification</h4>
+  </div>
+  <div class="modal-body">
+    
+    <p>No Notification!</p>
+
+
+  </div>
+  <div class="modal-footer">
+  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+  </div>
+  </div>
+  </div>
+  </div>
+<!-- 8th modal end -->

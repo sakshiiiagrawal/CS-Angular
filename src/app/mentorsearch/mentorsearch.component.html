@@ -1,0 +1,31 @@
+<div class="container nav-search68"  style="background-image: url(./assets/p25.jpg); height: 780px; overflow: none; background-position: center center; background-size: contain;">
+    <div class="jumbotron text-center" style="background-color: transparent;">
+      <h1>Search Result</h1>
+    </div>
+      
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4" *ngFor="let SearchResult of SearchResult">
+            <div class="card">
+                <img src="./assets/p13.png" alt="Sakshi" style="width:100%">
+                <h1>{{ SearchResult.firstName }}{{ SearchResult.lastName }}</h1>
+                <h3>{{ SearchResult.techName}}</h3>
+                <p>Experience: {{ SearchResult.yearsOf_experience}} yrs</p>
+                <p>Fees: {{ SearchResult.fes}}/-</p>
+                <p>Rating: {{ SearchResult.rating}} </p>
+                <p>Start Date: {{ SearchResult.startDate}} </p>
+                <p>End Date: {{ SearchResult.endDate}} </p>
+                <div style="margin: 24px 0;">
+                  <a href="#"><i class="fab fa-dribbble"></i></a> 
+                  <a href="#"><i class="fab fa-twitter"></i></a>  
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>  
+                  <a href="#"><i class="fab fa-facebook-f"></i></a> 
+                </div>
+                <p><button>Send Proposal</button></p>
+              </div>
+        </div>
+
+
+      </div>
+    </div>
+    </div>
